@@ -13,10 +13,21 @@ storeComponents.registerComponent([name], [function]);
 
 ### Initialization   
 ```
-storeComponents.initComponents([array of components]);
+storeComponents.initComponents([array of components {name: '', type: ''}]);
 ```
 
 ### Log
 ```
 storeComponents.showLogs();
+```
+
+## Example
+```
+const Greeting = () => {
+  console.log('Hello world!')
+}
+
+const storeComponents = new StoreComponents();
+storeComponents.registerComponent('Home', Greeting);
+storeComponents.initComponents([{name: 'Home', type: null}]);
 ```
